@@ -15,4 +15,5 @@ def mask_account_card(number: str) -> str:
 def get_data(old_data: str) -> str:
     """Функция принимает строку и возвращает число месяц год"""
     data_slice = old_data[0:10].split("-")
-    return ".".join(data_slice[::-1])
+    result = ".".join(data_slice[::-1])
+    return result
