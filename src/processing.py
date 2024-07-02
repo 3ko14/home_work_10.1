@@ -1,5 +1,5 @@
 def filter_by_state(list_dict: list, state: str = "EXECUTED") -> list:
-    """ Функция фильтрует список словарей по ключу state """
+    """Функция фильтрует список словарей по ключу state"""
     filtred_list = []
     for ld in list_dict:
         if ld.get("state") == state:
