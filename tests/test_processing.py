@@ -10,7 +10,7 @@ def test_filter_by_state(list_of_dicts):
     ]
 
 
-def test_filter_by_state():
+def test_filter_by_state() -> None:
     assert filter_by_state([]) == []
 
 
