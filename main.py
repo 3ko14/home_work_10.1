@@ -93,5 +93,5 @@ descriptions = transaction_descriptions(transactions)
 for _ in range(5):
     print(next(descriptions))
 
-for card_number in card_number_generator(2, 12):
+for card_number in card_number_generator(2, 8):
     print(card_number)
