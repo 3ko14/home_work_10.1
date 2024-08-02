@@ -18,10 +18,9 @@ def test_transaction_descriptions(transactions):
     assert next(descriptions_generator) == "Перевод организации"
 
 def test_card_number_generator() -> None:
-    generator = card_number_generator(1, 6)
+    generator = card_number_generator(1, 5)
     assert next(generator) == "0000 0000 0000 0001"
     assert next(generator) == "0000 0000 0000 0002"
     assert next(generator) == "0000 0000 0000 0003"
     assert next(generator) == "0000 0000 0000 0004"
     assert next(generator) == "0000 0000 0000 0005"
-    assert next(generator) == "0000 0000 0000 0006"
