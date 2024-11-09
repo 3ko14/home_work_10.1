@@ -1,7 +1,11 @@
+import os.path
+
 from src.generators import filter_by_currency, transaction_descriptions, card_number_generator
 from src.processing import filter_by_state, sort_by_date
 from src.widget import get_data, mask_account_card
 from src.decorators import log
+from src.utils import transaction_amaunt
+from src.external_api import currency_conversion
 
 
 print(mask_account_card("Visa Classic 6831982476737658"))
@@ -110,4 +114,15 @@ def my_function_error(x, y):
     return x / y
 
 
-my_function_error(2, 0)
+my_function_error(2, 1)
+
+
+current_dir = os.path.dirname(os.path.abspath(__file__))
+file_path = os.path.join(current_dir, "data", "operations.json")
+
+transactions1 = transaction_amaunt(file_path)
+
+
+for transaction in transactions1:
+    rub_amount = currency_conversion(transaction)
+    print(f"Transaktion amount in RUB: {rub_amount}")
