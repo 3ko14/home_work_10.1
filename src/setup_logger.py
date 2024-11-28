@@ -2,7 +2,7 @@ import logging
 import os
 
 def setup_logger(file_name, log_file):
-    """Функция настройки логов для модулей"""
+    """Функция настройки логов для модулей masks и utils"""
 
     os.makedirs("logs", exist_ok=True)
     logger = logging.getLogger(file_name)
